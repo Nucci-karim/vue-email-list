@@ -11,12 +11,11 @@
 <div id="app">
     <div>
         <ul>
-            <li>
-                {{emailRand}}
+            <li v-for="(elem, index) in emailRand" :key="index" v-if="emailRand.length === 10">
+                {{elem}}
             </li>
         </ul>
     </div>
-    <button @click="API()">Attiva</button>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
